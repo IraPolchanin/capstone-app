@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  &__logo_img {
+    max-width: 202px;
+  }
+}

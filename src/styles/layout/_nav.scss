@@ -1,0 +1,28 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    &_header {
+      justify-content: space-between;
+      gap: 26px;
+    }
+
+    &_footer {
+      flex-direction: column;
+      align-items: baseline;
+    }
+  }
+
+  &__item {}
+
+  &__link {
+    color: inherit;
+    font-family: inherit;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
