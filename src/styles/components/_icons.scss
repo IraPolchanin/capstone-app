@@ -1,0 +1,18 @@
+.icon {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  transition: all $transition;
+
+  &:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+
+  &-menu {
+    background-image: url(../../assets/icons/hamburger_menu_icon.svg);
+  }
+}

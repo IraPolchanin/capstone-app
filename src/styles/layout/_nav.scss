@@ -1,28 +1,94 @@
 .nav {
   &__list {
+    margin: 0;
     display: flex;
     align-items: center;
     list-style: none;
 
+    &_visible {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: $color-green-dark;
+      transition: all $transition;
+      height: 85vh;
+    }
+
+    @include onTablet {
+      display: none;
+
+      &_visible {
+        display: flex;
+        background: $color-dark-secondary;
+        z-index: 1000;
+        padding: 20px 0;
+      }
+    }
+
     &_header {
       justify-content: space-between;
       gap: 26px;
+
+      &>li>a {
+        padding: 1.5em 0.5em;
+
+        &:hover {
+          text-decoration-color: $color-green-dark;
+          text-underline-offset: 0.5em;
+        }
+      }
     }
 
     &_footer {
       flex-direction: column;
       align-items: baseline;
+
+      &>li>a {
+        background-color: $color-green-dark;
+
+        &:hover {
+          text-decoration-color: #fff;
+        }
+      }
     }
   }
 
-  &__item {}
-
   &__link {
+    white-space: nowrap;
     color: inherit;
     font-family: inherit;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    transition: all $transition;
+
+    &:hover {
+      text-decoration: underline solid;
+    }
+
+    @include onTablet {
+      color: #fff;
+    }
   }
+
+  &__menuIcon {
+    display: none;
+    cursor: pointer;
+
+    @include onTablet {
+      display: block;
+
+      &-footer {
+        display: none;
+      }
+    }
+  }
+}
+
+.has-background-yellow {
+  background-color: $color-yellow;
 }

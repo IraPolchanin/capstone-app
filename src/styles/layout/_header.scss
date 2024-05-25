@@ -1,9 +1,14 @@
 .header {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+ position: relative;
 
-  &__logo_img {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__logo {
     max-width: 202px;
   }
 }

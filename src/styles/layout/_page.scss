@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  color: $color-dark;
+  color: $color-green-dark;
   scroll-behavior: smooth;
 
   &__body {
@@ -12,7 +12,19 @@
   }
 
   &__section {
-    margin-bottom: 120px;
+    padding: 8vh 0;
   }
+}
 
+.confirm {
+  padding: 10px 13%;
+}
+
+input,
+select,
+option {
+  background-color: #eeeeee;
+  border: none;
+  padding: 5px 5px 5px 5px;
+  border-radius: 0.2rem;
 }

@@ -1,0 +1,37 @@
+.about {
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    @extend %text-main;
+  }
+
+  &__img-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  &__img {
+    width: 376px;
+    height: 252px;
+    border-radius: 16px;
+
+    &:first-child {
+      grid-column: 2/7;
+      grid-row: 1/5;
+    }
+
+    &:last-child {
+      grid-column: 1/6;
+      grid-row: 3/7;
+    }
+  }
+}

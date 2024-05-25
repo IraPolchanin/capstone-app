@@ -1,0 +1,13 @@
+.specials {
+  padding-top: 12vh;
+
+  &__title{
+  margin-bottom: 24px;
+  }
+
+  &__card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 316px);
+    justify-content: space-between;
+  }
+}

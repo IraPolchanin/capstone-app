@@ -1,0 +1,50 @@
+.form {
+  padding: 0 2rem 2rem;
+  width: 100%;
+  font-size: 1.6rem;
+
+  &-fieldset {
+    position: relative;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 0.25rem;
+    align-items: center;
+    margin: 2rem;
+  }
+
+  &-field {
+    width: 100%;
+    display: inline-block;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+
+    &:focus,
+    &:-webkit-autofill {
+      outline: none;
+      // border-bottom-color: $color-button;
+      // color: $color-light;
+      // -webkit-text-fill-color: $color-light;
+      // box-shadow: 0 0 0 1000px $color-background-dark inset;
+    }
+  }
+
+  &__btn {
+    width: max-content;
+    margin: 80px auto 0;
+
+    &:disabled {
+      background-color: lighten($color: $color-yellow, $amount: 30%);
+      color: #adafae;
+      cursor: not-allowed;
+    }
+  }
+
+  &__error-message {
+    position: absolute;
+    top: 75%;
+    font-size: 1.4rem;
+    color: red;
+  }
+}

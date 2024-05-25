@@ -1,0 +1,24 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  transition: all $transition;
+
+  &-primary {
+    background-color: $color-yellow;
+    color: black;
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    background-color: darken($color: $color-yellow, $amount: 5);
+  }
+}

@@ -1,0 +1,69 @@
+.card {
+  box-shadow: 0 0 15px #d9d9d9;
+  border-radius: 20px;
+  transition: all $transition;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.005);
+  }
+
+  &__image-container {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 185px;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all $transition;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+
+  &__content {
+    min-height: 254px;
+    padding: 20px 24px;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    white-space: nowrap;
+
+    &>span {
+      @extend %text-main;
+      font-weight: 700;
+      color: #ee9972;
+    }
+  }
+
+  &__description {
+    @extend %text-main;
+  }
+
+  &__btn {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: inherit;
+    @extend %text-main;
+    font-weight: 700;
+    transition: all $transition;
+
+    &:hover {
+      color: darken($color: $color-green-dark, $amount: 10);
+      text-decoration: underline;
+    }
+  }
+}

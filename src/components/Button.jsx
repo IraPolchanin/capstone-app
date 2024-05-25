@@ -1,9 +1,14 @@
 import React from 'react'
 
-const Button = () => {
+export const Button = ({ modifier, position, text, type, disable }) => {
   return (
-    <div>Button</div>
+    <button
+      type={type}
+      className={`button button-${modifier} ${position}__btn`}
+      aria-label={text}
+      disabled={disable}
+    >
+      {text}
+    </button>
   )
 }
-
-export default Button
