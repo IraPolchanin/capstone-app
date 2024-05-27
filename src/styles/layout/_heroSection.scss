@@ -1,4 +1,5 @@
 .hero {
+  padding: 24px 0 28px;
   background-color: $color-green-dark;
   color: #fff;
 
@@ -8,28 +9,45 @@
 
     &-text {
       max-width: 422px;
+
+      @include onTablet {
+        max-width: 322px;
+      }
+
+      @include onMobile {
+        max-width: none;
+      }
     }
   }
 
   &__subtitle {
     margin-bottom: 24px;
+    font-family: $font-heading;
+    font-size: 3.2rem;
+    line-height: normal;
   }
 
   &__description {
-    font-size: 2rem;
-    line-height: 1.5;
-    max-width: 520px;
-    font-style: normal;
     margin-bottom: 30px;
-    // font-weight: 500;
+    font-family: $font-title;
+    font-size: 2rem;
+    line-height: 140.625%;
+
+    @include onMobile {
+      font-size: 1.6rem;
+    }
   }
 
   &__img-container {
-    transform: translateY(25%);
     width: 375px;
     height: 325px;
 
     @include onTablet {
+      width: 188px;
+      height: 164px;
+    }
+
+    @include onMobile {
       display: none;
     }
   }

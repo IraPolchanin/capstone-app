@@ -5,7 +5,7 @@ import logo from '../assets/imiges/littleLemon_logo.png';
 
 export const Header = () => {
   return (
-    <header className='page__section header' aria-label='header'>
+    <header className='header' aria-label='header' id='header'>
       <div className='wrapper'>
         <div className='header__content'>
           <Link to='/'>

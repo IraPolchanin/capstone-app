@@ -1,15 +1,33 @@
 .customersSay {
   background-color: $color-green-dark;
+  padding: 122px 0 180px;
+
+  @include onTablet {
+    padding: 60px 0;
+  }
+
+  @include onMobile {
+    padding: 32px 0;
+  }
 
   &__title {
     color: #fff;
-    margin-bottom: 24px;
+    margin-bottom: 66px;
+    text-align: center;
+
+    @include onMobile {
+      margin-bottom: 32px;
+    }
   }
 
   &__card-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    justify-items: center;
+    row-gap: 24px;
+
+    @include onDesktopSM {
+      justify-content: space-evenly;
+    }
   }
 }

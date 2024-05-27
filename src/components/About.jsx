@@ -10,19 +10,7 @@ export const About = () => {
           <div className="about__text-container">
             <h2 className='about__title'>Our Story</h2>
             <p className='about__text'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum. Sed ut
-              perspiciatis unde omnis iste natus error sit voluptatem accusantium
-              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-              inventore veritatis et quasi architecto beatae vitae dicta sunt
-              explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-              odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt.
+              In 1998, amidst the vibrant streets of Chicago, Little Lemon Restaurant sprouted, blending Mediterranean flavors with family traditions. Inspired by a grandmother's secret recipes, our journey began with a pinch of nostalgia and a dash of ambition. From our humble kitchen experiments to bustling dining rooms filled with laughter, each dish tells a story of love and heritage. Little Lemon became a sanctuary where every bite evokes cherished memories and culinary adventures await.
             </p>
           </div>
           <div className="about__img-container">

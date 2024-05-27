@@ -9,10 +9,19 @@
 
   &__body {
     margin: 0;
+    font-size: 1.6rem;
   }
 
   &__section {
-    padding: 8vh 0;
+    padding: 88px 0 0;
+
+    @include onTablet {
+      padding: 66px 0 0;
+    }
+
+    @include onMobile {
+      padding: 32px 0 0;
+    }
   }
 }
 

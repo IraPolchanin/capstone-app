@@ -7,7 +7,7 @@ export const TestimonialCard = ({ customer }) => {
       <div className="testimonialCard__img-container">
         <img className="testimonialCard__img" src={customer.image} alt={customer.fullName} />
       </div>
-      <h4 className="testimonialCard__name">{customer.name}</h4>
+      <p className="testimonialCard__name">{customer.name}</p>
       <p className="testimonialCard__rating">
         {customer.rating.map((ratingPoint, index) =>
           ratingPoint === 1 ? (

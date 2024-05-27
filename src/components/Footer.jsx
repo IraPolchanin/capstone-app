@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link'
 import { NavBar } from './NavBar';
 import { SocialsLinks } from './SocialsLinks';
 import { contacts } from '../data/contacts'
@@ -6,18 +7,18 @@ import logoImg from '../assets/imiges/logo-white.png'
 
 export const Footer = () => {
   return (
-    <footer className='page__section footer'>
+    <footer className='footer'>
       <div className='wrapper'>
         <div className='footer__content'>
-          <div className='footer__logo-container'>
+          <HashLink to='/#header' className='footer__logo-container'>
             <img className='footer__logo' src={logoImg} alt="logo" />
-          </div>
+          </HashLink>
           <div className='footer__nav'>
-            <h4>Sitemap</h4>
+            <h6 className='footer__title'>Sitemap</h6>
             <NavBar position='footer' />
           </div>
           <div className='footer__contact'>
-            <h4>Contact us</h4>
+            <h6 className='footer__title'>Contact us</h6>
             <address>
               {contacts.map((contact, index) => (
                 <a
@@ -33,7 +34,7 @@ export const Footer = () => {
             </address>
           </div>
           <div className='footer__contact'>
-            <h4>Connect with us</h4>
+            <h6 className='footer__title'>Connect with us</h6>
             <SocialsLinks />
           </div>
         </div>

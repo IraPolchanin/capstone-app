@@ -1,11 +1,19 @@
 .header {
- position: relative;
+  padding: 24px 0;
+  position: relative;
+
+  @include onMobile {
+    padding: 8px 0;
+  }
 
   &__content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 45px;
+
+    @include onTablet {
+      justify-content: space-between;
+    }
   }
 
   &__logo {

@@ -43,7 +43,9 @@ export const NavBar = ({ position }) => {
         role="menu"
         className={classnames('nav__list', `nav__list_${position}`, {
           'nav__list_visible': isMenuOpen,
-        })}>
+        })}
+        onClick={()=>isMenuOpen && toggleMenu}
+        >
         <li className='nav__item'>
           <NavLink
             to='/'
@@ -56,7 +58,7 @@ export const NavBar = ({ position }) => {
         </li>
         <li className='nav__item'>
           <HashLink
-            to='#about'
+            to='/#about'
             role="menuitem"
             className={`nav__link ${location.hash === '#about' && 'has-background-yellow'}`}
           >
@@ -65,7 +67,7 @@ export const NavBar = ({ position }) => {
         </li>
         <li className='nav__item'>
           <HashLink
-            to='#menu'
+            to='/#menu'
             role="menuitem"
             className={`nav__link ${location.hash === '#menu' && 'has-background-yellow'}`}
           >
@@ -74,7 +76,7 @@ export const NavBar = ({ position }) => {
         </li>
         <li className='nav__item'>
           <NavLink
-            to='reservations'
+            to='booking'
             role="menuitem"
             className={getClassName}
           >

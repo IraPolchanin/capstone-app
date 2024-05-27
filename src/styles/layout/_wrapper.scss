@@ -1,9 +1,13 @@
 .wrapper {
   margin: 0 auto;
   max-width: 1440px;
-  padding: 0 13%;
+  padding: 0 290px;
 
-  @include onTablet {
-    padding: 10px 8%;
+  @include onDesktopSM {
+    padding: 0 80px;
+  }
+
+  @include onMobile{
+    padding: 0 20px;
   }
 }

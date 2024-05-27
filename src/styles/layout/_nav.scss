@@ -30,7 +30,6 @@
 
     &_header {
       justify-content: space-between;
-      gap: 26px;
 
       &>li>a {
         padding: 1.5em 0.5em;
@@ -39,18 +38,27 @@
           text-decoration-color: $color-green-dark;
           text-underline-offset: 0.5em;
         }
+
+        @include onMobile {
+          padding: 1em 0.5em;
+        }
       }
     }
 
     &_footer {
+      display: flex;
       flex-direction: column;
       align-items: baseline;
 
       &>li>a {
+        line-height: 130%;
         background-color: $color-green-dark;
+        transition: all $transition;
 
         &:hover {
-          text-decoration-color: #fff;
+          text-shadow: 1px 1px 1px #000;
+          text-decoration: underline 1px;
+          text-underline-offset: 0.3em;
         }
       }
     }
@@ -59,11 +67,11 @@
   &__link {
     white-space: nowrap;
     color: inherit;
+    font-size: 2rem;
     font-family: inherit;
-    font-size: 1.6rem;
-    font-style: normal;
     font-weight: 500;
     line-height: normal;
+    text-transform: capitalize;
     transition: all $transition;
 
     &:hover {
@@ -72,6 +80,10 @@
 
     @include onTablet {
       color: #fff;
+    }
+
+    @include onMobile {
+      font-size: 1.6rem;
     }
   }
 
