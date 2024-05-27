@@ -1,4 +1,21 @@
 .nav {
+  &__layer {
+    display: none;
+    position: absolute;
+    background-color: $color-dark-secondary;
+    opacity: 0.5;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &_visible {
+      display: block;
+      z-index: 1;
+    }
+  }
+
   &__list {
     margin: 0;
     display: flex;
@@ -23,7 +40,7 @@
       &_visible {
         display: flex;
         background: $color-dark-secondary;
-        z-index: 1000;
+        z-index: 10;
         padding: 20px 0;
       }
     }

@@ -1,0 +1,17 @@
+.messageSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-height: 40vh;
+  text-align: center;
+
+  @include onMobile {
+    min-height: 20vh;
+  }
+
+  &>h2>span {
+    color: $color-yellow;
+  }
+}

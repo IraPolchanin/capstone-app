@@ -8,10 +8,12 @@ export const NavBar = ({ position }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const [width, setWidth] = useState(window.innerWidth);
+
   const getClassName = ({ isActive }) =>
     classnames('nav__link', {
       'has-background-yellow': isActive,
     });
+
   const location = useLocation();
 
   useEffect(() => {
@@ -32,7 +34,8 @@ export const NavBar = ({ position }) => {
       role="navigation"
       className={classnames(`${position}__nav`, 'nav', {
         'open': isMenuOpen,
-      })}>
+      })}
+    >
       <div
         className={`icon icon-menu nav__menuIcon nav__menuIcon-${position}`}
         onClick={toggleMenu}
@@ -44,14 +47,18 @@ export const NavBar = ({ position }) => {
         className={classnames('nav__list', `nav__list_${position}`, {
           'nav__list_visible': isMenuOpen,
         })}
-        onClick={()=>isMenuOpen && toggleMenu}
-        >
+        onClick={() => {
+          if (isMenuOpen) {
+            toggleMenu()
+          }
+        }}
+      >
         <li className='nav__item'>
           <NavLink
             to='/'
             end
             role="menuitem"
-            className={`nav__link ${location.hash === '' && 'has-background-yellow'}`}
+            className={`nav__link ${location.hash === '' && location.pathname === '/' && 'has-background-yellow'}`}
           >
             Home
           </NavLink>
@@ -102,6 +109,13 @@ export const NavBar = ({ position }) => {
           </NavLink>
         </li>
       </ul>
+
+      <div
+        className={classnames('nav__layer', {
+          'nav__layer_visible': isMenuOpen,
+        })}
+      >
+      </div>
     </nav>
   )
 }

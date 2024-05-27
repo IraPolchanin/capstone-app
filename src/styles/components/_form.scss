@@ -1,7 +1,11 @@
 .form {
-  padding: 0 2rem 2rem;
+  padding: 0 2rem 66px;
   width: 100%;
   font-size: 1.6rem;
+
+  @include onMobile {
+    padding-bottom: 32px;
+  }
 
   &-fieldset {
     position: relative;
@@ -10,7 +14,11 @@
     grid-template-columns: 1fr 2fr;
     column-gap: 0.25rem;
     align-items: center;
-    margin: 2rem;
+  }
+
+  &-label {
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
   &-field {

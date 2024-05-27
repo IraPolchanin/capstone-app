@@ -10,7 +10,7 @@ export const Footer = () => {
     <footer className='footer'>
       <div className='wrapper'>
         <div className='footer__content'>
-          <HashLink to='/#header' className='footer__logo-container'>
+          <HashLink to='#header' className='footer__logo-container'>
             <img className='footer__logo' src={logoImg} alt="logo" />
           </HashLink>
           <div className='footer__nav'>

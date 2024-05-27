@@ -1,7 +1,7 @@
-import React, { useReducer } from 'react'
+import React, { useReducer } from 'react';
+import { useNavigate } from "react-router-dom";
 import { BookingForm } from '../components/BookingForm';
 import { fetchAPI, submitAPI } from '../utils/mockAPI';
-import { Navigate } from 'react-router-dom';
 
 const updateTimes = (availableTimes, date) => {
   const response = fetchAPI(new Date(date));
@@ -14,6 +14,7 @@ const initializeTimes = (initialAvailableTimes) => [
 ];
 
 export const BookingPage = () => {
+  const navigate = useNavigate();
   const [availableTimes, dispatchOnDateChange] = useReducer(
     updateTimes,
     [],
@@ -23,15 +24,19 @@ export const BookingPage = () => {
   const submitData = (formData) => {
     const response = submitAPI(formData);
     if (response) {
-      <Navigate to="/confirmed" />
+      navigate("confirmedBooking");
     };
   };
 
   return (
-    <BookingForm
-      availableTimes={availableTimes}
-      dispatchOnDateChange={dispatchOnDateChange}
-      submitData={submitData}
-    />
+    <section className='page__section'>
+      <div className='wrapper'>
+        <BookingForm
+          availableTimes={availableTimes}
+          dispatchOnDateChange={dispatchOnDateChange}
+          submitData={submitData}
+        />
+      </div>
+    </section>
   );
 };
