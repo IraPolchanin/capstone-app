@@ -63,9 +63,9 @@
     transition: all $transition;
 
     &:hover {
-     text-shadow: 1px 1px 1px $color-dark;
-     text-decoration: underline 1px;
-     text-underline-offset: 0.3em;
+      text-shadow: 1px 1px 1px $color-dark;
+      text-decoration: underline 1px;
+      text-underline-offset: 0.3em;
     }
   }
 }

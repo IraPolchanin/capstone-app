@@ -1,20 +1,20 @@
 import React from 'react';
-import { HashLink } from 'react-router-hash-link'
+import { HashLink } from 'react-router-hash-link';
 import { NavBar } from './NavBar';
 import { SocialsLinks } from './SocialsLinks';
-import { contacts } from '../data/contacts'
-import logoImg from '../assets/imiges/logo-white.png'
+import { contacts } from '../data/contacts';
+import logoImg from '../assets/imiges/logo-white.png';
 
 export const Footer = () => {
   return (
-    <footer className='footer'>
+    <footer className='footer' aria-labelledby="footer-heading">
       <div className='wrapper'>
         <div className='footer__content'>
-          <HashLink to='#header' className='footer__logo-container'>
-            <img className='footer__logo' src={logoImg} alt="logo" />
+          <HashLink to='./#header' className='footer__logo-container' aria-label="Back to top">
+            <img className='footer__logo' src={logoImg} alt="Logo" />
           </HashLink>
           <div className='footer__nav'>
-            <h6 className='footer__title'>Sitemap</h6>
+            <h6 className='footer__title' id="footer-heading">Sitemap</h6>
             <NavBar position='footer' />
           </div>
           <div className='footer__contact'>
@@ -27,6 +27,7 @@ export const Footer = () => {
                   key={index}
                   target='_blank'
                   rel="noreferrer"
+                  aria-label={contact.label}
                 >
                   {contact.icon} {contact.info}
                 </a>

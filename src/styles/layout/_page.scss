@@ -10,6 +10,7 @@
   &__body {
     margin: 0;
     font-size: 1.6rem;
+    position: relative;
   }
 
   &__section {
@@ -32,4 +33,20 @@ option {
   border: none;
   padding: 16px;
   border-radius: 0.2rem;
+}
+
+.scroll-blocked {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }

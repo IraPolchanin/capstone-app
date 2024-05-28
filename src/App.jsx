@@ -4,10 +4,10 @@ import { Main } from './components/Main';
 
 export const App = () => {
   return (
-    <>
+    <div className='app'>
       <Header />
       <Main />
       <Footer />
-    </>
+    </div>
   );
 };

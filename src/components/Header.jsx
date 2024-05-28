@@ -5,11 +5,11 @@ import logo from '../assets/imiges/littleLemon_logo.png';
 
 export const Header = () => {
   return (
-    <header className='header' aria-label='header' id='header'>
+    <header className='header' aria-label='Site header' id='header'>
       <div className='wrapper'>
         <div className='header__content'>
-          <Link to='/'>
-            <img className='header__logo logo' src={logo} alt='little-lemon-logo' />
+          <Link to='/' aria-label='Home'>
+            <img className='header__logo logo' src={logo} alt='Little Lemon logo' />
           </Link>
           <NavBar position='header' />
         </div>

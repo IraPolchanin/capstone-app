@@ -6,11 +6,15 @@ import { Button } from './Button';
 
 export const Specials = () => {
   return (
-    <section className='page__section specials' id="menu">
+    <section 
+    className='page__section specials' 
+    id="menu"
+    aria-labelledby="specials-title"
+    >
       <div className='wrapper'>
         <div className='specials__header'>
-          <h3 className='specials__title'>This week specials!</h3>
-          <Link className='specials__btn' to='orderOnline' role="button">
+          <h3 className='specials__title' id="specials-title">This week specials!</h3>
+          <Link className='specials__btn' to='orderOnline' role="button" aria-label="View Online Menu">
             <Button text='Online Menu' modifier='primary' />
           </Link>
         </div>

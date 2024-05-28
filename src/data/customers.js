@@ -23,13 +23,13 @@ export const customers = [
     id: 3,
     image: JohnImg,
     rating: [1, 1, 1, 1, 0.5],
-    quote: "A culinary haven with exceptional service and delectable dishes, ensuring a memorable dining experience. Highly recommended!",
+    quote: "Exquisite cuisine with a familial touch, offering a delightful culinary journey. Highly recommended dining experience!",
   },
   {
     name: "Sarah",
     id: 4,
     image: SarahImg,
     rating: [1, 1, 1, 1, 1],
-    quote: "A culinary haven in Chicago, offering impeccable service and authentic Mediterranean flavors. Simply outstanding!",
+    quote: "Exceptional dining experience with delectable dishes and warm, inviting atmosphere. Highly recommended for food enthusiasts!",
   },
 ];

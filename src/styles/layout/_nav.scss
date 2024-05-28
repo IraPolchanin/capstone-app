@@ -1,52 +1,42 @@
 .nav {
-  &__layer {
-    display: none;
-    position: absolute;
-    background-color: $color-dark-secondary;
-    opacity: 0.5;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    &_visible {
-      display: block;
-      z-index: 1;
-    }
-  }
-
   &__list {
     margin: 0;
     display: flex;
     align-items: center;
     list-style: none;
 
-    &_visible {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      width: 100%;
-      flex-direction: column;
-      justify-content: space-between;
-      background-color: $color-green-dark;
-      transition: all $transition;
-      height: 85vh;
-    }
-
-    @include onTablet {
-      display: none;
-
-      &_visible {
-        display: flex;
-        background: $color-dark-secondary;
-        z-index: 10;
-        padding: 20px 0;
-      }
-    }
-
     &_header {
       justify-content: space-between;
+
+      &_visible {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $color-green-dark;
+        transition: all $transition;
+        height: calc(100vh - 75px);
+      }
+
+      @include onTablet {
+        display: none;
+
+        &_visible {
+          display: flex;
+          background: $color-dark-secondary;
+          z-index: 10;
+          padding: 20px 0;
+          height: calc(100vh - 110px);
+        }
+      }
+
+      @include onMobile {
+        &_visible {
+          height: calc(100vh - 75px);
+        }
+      }
 
       &>li>a {
         padding: 1.5em 0.5em;

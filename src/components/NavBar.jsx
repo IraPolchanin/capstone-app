@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-
-import { HashLink } from 'react-router-hash-link'
-import classnames from 'classnames'
+import { HashLink } from 'react-router-hash-link';
+import classnames from 'classnames';
 
 export const NavBar = ({ position }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,11 +26,22 @@ export const NavBar = ({ position }) => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [width, isMenuOpen]);
+  }, [width, isMenuOpen, setIsMenuOpen]);
+
+  useEffect(() => {
+    isMenuOpen ?
+      document.body.classList.add('scroll-blocked')
+      : document.body.classList.remove('scroll-blocked');
+
+    return () => {
+      document.body.classList.remove('scroll-blocked');
+    };
+  }, [isMenuOpen]);
 
   return (
     <nav
       role="navigation"
+      aria-label="Main navigation"
       className={classnames(`${position}__nav`, 'nav', {
         'open': isMenuOpen,
       })}
@@ -39,13 +49,19 @@ export const NavBar = ({ position }) => {
       <div
         className={`icon icon-menu nav__menuIcon nav__menuIcon-${position}`}
         onClick={toggleMenu}
+        aria-expanded={isMenuOpen ? "true" : "false"}
+        aria-controls="nav-menu"
+        role="button"
+        tabIndex="0"
       >
+        <span className="sr-only">Toggle menu</span>
       </div>
 
       <ul
+        id="nav-menu"
         role="menu"
         className={classnames('nav__list', `nav__list_${position}`, {
-          'nav__list_visible': isMenuOpen,
+          'nav__list_header_visible': isMenuOpen && position === 'header',
         })}
         onClick={() => {
           if (isMenuOpen) {
@@ -109,13 +125,6 @@ export const NavBar = ({ position }) => {
           </NavLink>
         </li>
       </ul>
-
-      <div
-        className={classnames('nav__layer', {
-          'nav__layer_visible': isMenuOpen,
-        })}
-      >
-      </div>
     </nav>
   )
 }

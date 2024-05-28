@@ -1,0 +1,59 @@
+.notFound {
+  &__title {
+    text-align: center;
+    margin-bottom: 56px;
+    color: $color-yellow;
+  }
+
+  &__subscribe {
+    &>h4 {
+      line-height: 20px;
+    }
+  }
+
+  &__text {
+    font-family: $font-main;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 24px 0;
+
+    &>div {
+      gap: 18px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    margin-top: 32px;
+
+    @include onMobile {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &>button {
+      margin: 0;
+
+      @include onMobile {
+        width: 100%;
+      }
+    }
+
+    &-input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      width: 80%;
+    }
+  }
+}
