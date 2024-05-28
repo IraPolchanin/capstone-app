@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/capstone-app/static/css/main.637be9f3.css",
+    "main.js": "/capstone-app/static/js/main.292ca5bc.js",
+    "static/js/453.e9e90eab.chunk.js": "/capstone-app/static/js/453.e9e90eab.chunk.js",
+    "static/media/greek-salad.jpg": "/capstone-app/static/media/greek-salad.bed423a1fab5b210e347.jpg",
+    "static/media/banner.jpg": "/capstone-app/static/media/banner.e8abf5b772b6817189aa.jpg",
+    "static/media/Mary.avif": "/capstone-app/static/media/Mary.7536538415f73cb79587.avif",
+    "static/media/Anthony.avif": "/capstone-app/static/media/Anthony.b9b0429b7b81fce5297b.avif",
+    "static/media/Sarah.avif": "/capstone-app/static/media/Sarah.d113ace48c21a4d2fe76.avif",
+    "static/media/John.avif": "/capstone-app/static/media/John.9c71d714604134e73732.avif",
+    "static/media/bruchetta.png": "/capstone-app/static/media/bruchetta.72f0dd441967ef2edfb9.png",
+    "static/media/chefs-mario-and-adrian_1.jpg": "/capstone-app/static/media/chefs-mario-and-adrian_1.baf0d2e31dc6977f913f.jpg",
+    "static/media/chefs-mario-and-adrian_2.jpg": "/capstone-app/static/media/chefs-mario-and-adrian_2.5d8cccd399ab68c5c40b.jpg",
+    "static/media/logo-white.png": "/capstone-app/static/media/logo-white.d09eb2af6c5a2225eedf.png",
+    "static/media/littleLemon_logo.png": "/capstone-app/static/media/littleLemon_logo.d4cae6fac8384c2dae04.png",
+    "static/media/instagram.svg": "/capstone-app/static/media/instagram.64e23c63b0e9f709c160c97a8338fdf4.svg",
+    "index.html": "/capstone-app/index.html",
+    "static/media/hamburger_menu_icon.svg": "/capstone-app/static/media/hamburger_menu_icon.067789f5110dec514019.svg",
+    "static/media/x-twitter.svg": "/capstone-app/static/media/x-twitter.8555d3b9007f2d69d1186fde6d4070d4.svg",
+    "static/media/facebook.svg": "/capstone-app/static/media/facebook.aceb9dff35e68071c5b7c11d988195dc.svg",
+    "main.637be9f3.css.map": "/capstone-app/static/css/main.637be9f3.css.map",
+    "main.292ca5bc.js.map": "/capstone-app/static/js/main.292ca5bc.js.map",
+    "453.e9e90eab.chunk.js.map": "/capstone-app/static/js/453.e9e90eab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.637be9f3.css",
+    "static/js/main.292ca5bc.js"
+  ]
+}
