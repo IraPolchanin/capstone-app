@@ -1,6 +1,7 @@
 import React from 'react'
 
-export const Button = ({ modifier, position, text, type, disable, ariaLabel }) => {
+export const Button = ({ modifier, position, text, type, disable }) => {
+console.log(disable)
   return (
     <button
       type={type}

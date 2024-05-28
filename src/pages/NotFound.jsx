@@ -22,7 +22,7 @@ export const NotFound = () => {
           <h4 className='notFound__subtitle' id="social-media-heading">Follow us on social media for the latest updates:</h4>
           <SocialsLinks />
         </div>
-        <div class="notFound__subscribe">
+        <div className="notFound__subscribe">
           <h4 className='notFound__subtitle' id="newsletter-heading">Be the first to know! <span className='notFound__text'>Subscribe to our newsletter to receive early access to new features and special promotions.</span></h4>
           <form className='form notFound__form' onSubmit={handleSubmit} aria-labelledby="newsletter-heading">
             <label htmlFor="email-input" className="sr-only">Enter your email</label>
@@ -42,6 +42,7 @@ export const NotFound = () => {
               modifier='primary'
               type='submit'
               position='form'
+              disable={!userEmail.trim()}
             />
           </form>
         </div>
