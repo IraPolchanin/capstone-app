@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from './Button';
 
 export const BookingForm = ({ availableTimes,
@@ -8,7 +8,7 @@ export const BookingForm = ({ availableTimes,
   const occasions = ["Birthday", "Anniversary", "Other"];
 
   const [date, setDate] = useState(currentDate);
-  const [time, setTime] = useState(availableTimes[0]);
+  const [time, setTime] = useState(availableTimes.length > 0 ? availableTimes[0] : '')
   const [guestsNum, setGuestsNum] = useState(1);
   const [occasion, setOccasion] = useState(occasions[0]);
 
@@ -24,6 +24,12 @@ export const BookingForm = ({ availableTimes,
     'guests': "Please enter a number between 1 and 10",
   };
 
+  useEffect(() => {
+    if (availableTimes.length > 0) {
+      setTime(availableTimes[0]);
+    }
+  }, [availableTimes]);
+
   const handleDateChange = e => {
     setDate(e.target.value);
     dispatchOnDateChange(e.target.value);
@@ -31,7 +37,7 @@ export const BookingForm = ({ availableTimes,
 
   const handleSubmit = e => {
     e.preventDefault();
-    submitData({ date, time, guestsNum, occasion });
+    submitData({ date, time, guestsNum: Number(guestsNum), occasion });
   }
 
   return (
@@ -54,7 +60,6 @@ export const BookingForm = ({ availableTimes,
           <p
             id="date-error"
             className='form__error-message'
-          // data-testId="error-message"
           >
             {errorMessage.date}
           </p>
@@ -64,7 +69,7 @@ export const BookingForm = ({ availableTimes,
       </fieldset>
 
       <fieldset className='form-fieldset'>
-       <legend className="sr-only">Time Selection</legend>
+        <legend className="sr-only">Time Selection</legend>
         <label className="form-label" htmlFor="res-time">Choose time</label>
         <select
           aria-describedby="select_time"
@@ -75,7 +80,6 @@ export const BookingForm = ({ availableTimes,
           onChange={e => setTime(e.target.value)}
         >
           <option value=''>Select a time</option>
-
           {availableTimes.map(time => (
             <option key={time} value={time}>{time}</option>
           )
@@ -85,7 +89,6 @@ export const BookingForm = ({ availableTimes,
           <p
             id="time-error"
             className='form__error-message'
-          // data-testId="error-message"
           >
             {errorMessage.time}
           </p>
@@ -96,23 +99,23 @@ export const BookingForm = ({ availableTimes,
 
       <fieldset className='form-fieldset'>
         <legend className="sr-only">Guest Number</legend>
-        <label className="form-label" htmlFor="guests">Number of Guests</label>
+        <label className="form-label" htmlFor="res-guests">Number of Guests</label>
         <input
           className="form-field"
           aria-labelledby="select_number_of_guests"
           type="number"
           name="guestsNum"
-          id="guests"
+          id="res-guests"
           min={1}
           max={10}
           value={guestsNum}
           onChange={e => setGuestsNum(e.target.value)}
         />
+        <span id="select_number_of_guests" className="sr-only">Number of Guests</span>
         {!isGuestsNumValid && (
           <p
             id="guests-error"
             className='form__error-message'
-          // data-testId="error-message"
           >
             {errorMessage.guests}
           </p>
@@ -146,7 +149,6 @@ export const BookingForm = ({ availableTimes,
           <p
             id="occasion-error"
             className='form__error-message'
-          // data-testId="error-message"
           >
             {errorMessage.occasion}
           </p>
