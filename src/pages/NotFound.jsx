@@ -9,7 +9,7 @@ export const NotFound = () => {
   const handleSubmit = e => {
     e.preventDefault();
     if (userEmail.trim()) {
-      navigate("confirmedEmail");
+      navigate("/capstone-app/confirmedEmail");
     }
   }
 
