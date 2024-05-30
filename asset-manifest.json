@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/capstone-app/static/css/main.637be9f3.css",
-    "main.js": "/capstone-app/static/js/main.de096c83.js",
+    "main.js": "/capstone-app/static/js/main.73d5a3fc.js",
     "static/js/453.e9e90eab.chunk.js": "/capstone-app/static/js/453.e9e90eab.chunk.js",
     "static/media/greek-salad.jpg": "/capstone-app/static/media/greek-salad.bed423a1fab5b210e347.jpg",
     "static/media/banner.jpg": "/capstone-app/static/media/banner.e8abf5b772b6817189aa.jpg",
@@ -20,11 +20,11 @@
     "static/media/x-twitter.svg": "/capstone-app/static/media/x-twitter.8555d3b9007f2d69d1186fde6d4070d4.svg",
     "static/media/facebook.svg": "/capstone-app/static/media/facebook.aceb9dff35e68071c5b7c11d988195dc.svg",
     "main.637be9f3.css.map": "/capstone-app/static/css/main.637be9f3.css.map",
-    "main.de096c83.js.map": "/capstone-app/static/js/main.de096c83.js.map",
+    "main.73d5a3fc.js.map": "/capstone-app/static/js/main.73d5a3fc.js.map",
     "453.e9e90eab.chunk.js.map": "/capstone-app/static/js/453.e9e90eab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.637be9f3.css",
-    "static/js/main.de096c83.js"
+    "static/js/main.73d5a3fc.js"
   ]
 }
