@@ -10,7 +10,7 @@ export const Footer = () => {
     <footer className='footer' aria-labelledby="footer-heading">
       <div className='wrapper'>
         <div className='footer__content'>
-          <HashLink to='./#header' className='footer__logo-container' aria-label="Back to top">
+          <HashLink to='#header' className='footer__logo-container' aria-label="Back to top">
             <img className='footer__logo' src={logoImg} alt="Logo" />
           </HashLink>
           <div className='footer__nav'>

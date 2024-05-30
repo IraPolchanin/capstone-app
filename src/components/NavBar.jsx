@@ -71,7 +71,7 @@ export const NavBar = ({ position }) => {
       >
         <li className='nav__item'>
           <NavLink
-            to='/'
+            to='/capstone-app'
             end
             role="menuitem"
             className={`nav__link ${location.hash === '' && location.pathname === '/' && 'has-background-yellow'}`}
@@ -81,7 +81,7 @@ export const NavBar = ({ position }) => {
         </li>
         <li className='nav__item'>
           <HashLink
-            to='/#about'
+            to='/capstone-app#about'
             role="menuitem"
             className={`nav__link ${location.hash === '#about' && 'has-background-yellow'}`}
           >
@@ -90,7 +90,7 @@ export const NavBar = ({ position }) => {
         </li>
         <li className='nav__item'>
           <HashLink
-            to='/#menu'
+            to='/capstone-app#menu'
             role="menuitem"
             className={`nav__link ${location.hash === '#menu' && 'has-background-yellow'}`}
           >
@@ -99,7 +99,7 @@ export const NavBar = ({ position }) => {
         </li>
         <li className='nav__item'>
           <NavLink
-            to='booking'
+            to='/capstone-app/booking'
             role="menuitem"
             className={getClassName}
           >

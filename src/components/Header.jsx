@@ -8,7 +8,7 @@ export const Header = () => {
     <header className='header' aria-label='Site header' id='header'>
       <div className='wrapper'>
         <div className='header__content'>
-          <Link to='/' aria-label='Home'>
+          <Link to='/capstone-app' aria-label='Home'>
             <img className='header__logo logo' src={logo} alt='Little Lemon logo' />
           </Link>
           <NavBar position='header' />

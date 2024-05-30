@@ -10,13 +10,15 @@ export const Main = () => {
   return (
     <main className="main" aria-label="Main content">
       <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='booking'>
-          <Route index element={<BookingPage />} />
-          <Route path='confirmedBooking' element={<ConfirmedBooking />} />
+        <Route path='/capstone-app'>
+          <Route index element={<HomePage />} />
+          <Route path='booking/*'>
+            <Route index element={<BookingPage />} />
+            <Route path='confirmedBooking' element={<ConfirmedBooking />} />
+          </Route>
+          <Route path='confirmedEmail' element={<ConfirmedSubscribing />} />
         </Route>
         <Route path='*' element={<NotFound />} />
-        <Route path='confirmedEmail' element={<ConfirmedSubscribing />} />
       </Routes>
     </main>
   );
