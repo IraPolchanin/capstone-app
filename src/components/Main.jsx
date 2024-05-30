@@ -16,8 +16,8 @@ export const Main = () => {
             <Route index element={<BookingPage />} />
             <Route path='confirmedBooking' element={<ConfirmedBooking />} />
           </Route>
+          <Route path='confirmedEmail' element={<ConfirmedSubscribing />} />
         </Route>
-        <Route path='confirmedEmail' element={<ConfirmedSubscribing />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </main>
